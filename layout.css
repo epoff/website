@@ -1,0 +1,98 @@
+.layout {
+	display: grid;
+	grid-template-columns: var(--left-nav-width) 1fr;
+	height: 100%;
+}
+.layout.expanded {
+	grid-template-columns: var(--expanded-nav-width) 1fr;
+}
+
+.layout .nav {
+	width: var(--left-nav-width);
+	height: 100%;
+	background-color: var(--batterii-navy);
+	display: flex;
+	flex-direction: column;
+	z-index: 3;
+	transition: width .25s ease-in-out;
+	overflow-x: hidden;
+	padding: 8px;
+}
+.layout.expanded .nav,
+.layout .nav:hover {
+	width: var(--expanded-nav-width);
+}
+
+.vurvey, .user, .link, .workspace {
+	display: grid;
+	grid-template-columns: calc(var(--left-nav-width) - 32px) 1fr;
+	align-items: center;
+	text-decoration: none;
+	color: var(--batterii-white);
+	padding: 8px;
+	font-family: "batterii-brand", sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.label {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+	margin: 0 12px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.beta {
+	opacity: 0;
+	font-size: 1rem;
+	transition: opacity .25s ease-in-out;
+	position: absolute;
+	right: 20px;
+	line-height: 1.27rem;
+	color: var(--batterii-navy);
+	background-color: var(--batterii-magenta);
+	font-weight: 600;
+	padding: 3px 5px;
+	border-radius: 10px;
+}
+
+.user .label {
+	display: flex;
+	flex-direction: column;
+}
+
+.label span:last-child {
+	font-weight: normal;
+	font-size: 11px;
+}
+
+.layout.expanded .nav .label,
+.layout.expanded .nav .beta,
+.layout .nav:hover .label,
+.layout .nav:hover .beta {
+	opacity: 1;
+}
+
+.workspace {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 3px 3px 0 0;
+	margin-bottom: 2px;
+	position: relative;
+}
+
+.invite {
+	background-color: rgba(255, 255, 255, .1);
+	border-radius: 0 0 3px 3px;
+	color: var(--batterii-white);
+	cursor: pointer;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	padding: 4px;
+	font-size: 11px;
+}
