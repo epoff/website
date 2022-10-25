@@ -289,3 +289,9 @@ img.f-right {
 .input-submit {
 	padding:3px;
 }
+.caption {
+    font-size: 10px;
+    color: white; 
+    text-align: center;
+    background-color: #800000;
+}
