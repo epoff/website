@@ -71,7 +71,7 @@ img.f-right {
 	margin-left:15px;
 }
 .main {
-	width:960px;
+	width:1080px;
 	margin:0 auto;
 }
 #header {
@@ -125,7 +125,7 @@ img.f-right {
 }
 #content {
 	float:left;
-	width:680px;
+	width:800px;
 	text-align:justify;
 }
 .articles {
